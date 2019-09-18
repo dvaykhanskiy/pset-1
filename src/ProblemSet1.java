@@ -21,13 +21,13 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        double SHEETLENGTH = 11;
-        double SHEETWIDTH = 8.5;
-        double CONVERSION = 25.4;
-        double LENGTHMILLI = SHEETLENGTH * CONVERSION;
-        double WIDTHMILLI = SHEETWIDTH * CONVERSION;
-        double AREA = LENGTHMILLI * WIDTHMILLI;
-        System.out.printf("\n%,.2f square millimeters.\n", AREA);
+        final double SHEET_LENGTH = 11;
+        final double SHEET_WIDTH = 8.5;
+        final double CONVERSION = 25.4;
+        double lengthMilli = SHEET_LENGTH * CONVERSION;
+        double widthMilli = SHEET_WIDTH * CONVERSION;
+        double area = lengthMilli * widthMilli;
+        System.out.printf("\n%,.2f square millimeters.\n", area);
 
 
         /*
@@ -35,11 +35,11 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         double CONVERSION2 = 2.54;
-         double LENGTHCENTI = SHEETLENGTH * CONVERSION2;
-         double WIDTHCENTI = SHEETWIDTH * CONVERSION2;
-         double PERIMETER = (2 * WIDTHCENTI) + (2 * LENGTHCENTI);
-         System.out.printf("\n%,.2f centimeters. \n", PERIMETER);
+         final double CONVERSION2 = 2.54;
+         double lengthCenti = SHEET_LENGTH * CONVERSION2;
+         double widthCenti = SHEET_WIDTH * CONVERSION2;
+         double perimeter = (2 * widthCenti) + (2 * lengthCenti);
+         System.out.printf("\n%,.2f centimeters. \n", perimeter);
 
 
         /*
@@ -48,8 +48,8 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-         double DIAGONAL = Math.sqrt((SHEETWIDTH * SHEETWIDTH) + (SHEETLENGTH * SHEETLENGTH));
-         System.out.printf("\n%,.2f inches. \n", DIAGONAL);
+         double diagonal = Math.sqrt((SHEET_WIDTH * SHEET_WIDTH) + (SHEET_LENGTH * SHEET_LENGTH));
+         System.out.printf("\n%,.2f inches. \n", diagonal);
 
 
         /*
@@ -68,7 +68,14 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
-
+        final double HW_WEIGHT = 0.15;
+        final double QUIZ_WEIGHT = 0.35;
+        final double TEST_WEIGHT = 0.50;
+        double hwGrade = (homework1 + homework2 + homework3) * HW_WEIGHT / 3;
+        double quizGrade = (quiz1 + quiz2 + quiz3) * QUIZ_WEIGHT / 3;
+        double testGrade = (test1 + test2 + test3) * TEST_WEIGHT / 3;
+        double finalGrade = hwGrade + quizGrade + testGrade;
+        System.out.printf("\n%.2f%%.\n", finalGrade);
 
 
         /*
