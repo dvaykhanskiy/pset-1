@@ -99,7 +99,12 @@ public class ProblemSet1 {
          *
          * What is my take-home pay each check?
          */
-
+         final double PAYCHECK = 117000 / 24;
+         final double FEDERAL_TAX = 0.24;
+         final double STATE_TAX = .0637;
+         final double RETIRE_PAY = .07;
+         double takeHomePay = PAYCHECK * (1 - FEDERAL_TAX) * (1 - STATE_TAX) * (1 - RETIRE_PAY);
+         System.out.printf("\n$%,.2f\n", takeHomePay);
 
 
         /*
