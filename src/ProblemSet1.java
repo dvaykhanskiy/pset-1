@@ -84,8 +84,15 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-
-
+         final double WAGE = 12.50;
+         final double HOURS_MONDAY = 7.5;
+         final double HOURS_TUESDAY = 8;
+         final double HOURS_WEDNESDAY = 10.5;
+         final double HOURS_THURSDAY = 9.5;
+         final double HOURS_FRIDAY = 6;
+         final double HOURS_SATURDAY = 11.5;
+         double weeklyIncome = (HOURS_SATURDAY + HOURS_FRIDAY + HOURS_THURSDAY + HOURS_WEDNESDAY + HOURS_TUESDAY + HOURS_MONDAY) * WAGE;
+         System.out.printf("\n$%.2f\n", weeklyIncome);
 
         /*
          * Exercise 6.
