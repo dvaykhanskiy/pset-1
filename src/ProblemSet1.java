@@ -27,7 +27,7 @@ public class ProblemSet1 {
         double LENGTHMILLI = SHEETLENGTH * CONVERSION;
         double WIDTHMILLI = SHEETWIDTH * CONVERSION;
         double AREA = LENGTHMILLI * WIDTHMILLI;
-        System.out.printf("\n%,.2f square millimeters. \n", AREA);
+        System.out.printf("\n%,.2f square millimeters.\n", AREA);
 
 
         /*
@@ -35,7 +35,11 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-
+         double CONVERSION2 = 2.54;
+         double LENGTHCENTI = SHEETLENGTH * CONVERSION2;
+         double WIDTHCENTI = SHEETWIDTH * CONVERSION2;
+         double PERIMETER = (2 * WIDTHCENTI) + (2 * LENGTHCENTI);
+         System.out.printf("\n%,.2f centimeters. \n", PERIMETER);
 
 
         /*
@@ -44,7 +48,8 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-
+         double DIAGONAL = Math.sqrt((SHEETWIDTH * SHEETWIDTH) + (SHEETLENGTH * SHEETLENGTH));
+         System.out.printf("\n%,.2f inches. \n", DIAGONAL);
 
 
         /*
