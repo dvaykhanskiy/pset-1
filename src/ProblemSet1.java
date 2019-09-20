@@ -104,7 +104,7 @@ public class ProblemSet1 {
          final double STATE_TAX = .0637;
          final double RETIRE_PAY = .07;
          double takeHomePay = PAYCHECK * (1 - FEDERAL_TAX) * (1 - STATE_TAX) * (1 - RETIRE_PAY);
-         System.out.printf("\n$%,.2f\n", takeHomePay);
+         System.out.printf("\n$%,.2f.\n", takeHomePay);
 
 
         /*
@@ -127,7 +127,12 @@ public class ProblemSet1 {
          *
          * What is the surface area of a standard Cornhole board?
          */
-
+         final double BOARD_LENGTH = 48;
+         final double BOARD_WIDTH = 24;
+         final double DIAMETER = 6;
+         double radius = DIAMETER / 2;
+         double boardArea = (BOARD_WIDTH * BOARD_LENGTH) - (Math.PI * radius * radius);
+         System.out.printf("\n%,.2f square inches.\n", boardArea);
 
 
         /*
@@ -135,7 +140,17 @@ public class ProblemSet1 {
          *
          * Are the years 2020, 2100, and 2400 leap years?
          */
+         int year = 2020;
+         boolean isLeapYear = ((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0));
+         System.out.println("\n" + year + " is a leap year..." + isLeapYear + ".");
 
+         year = 2100;
+         isLeapYear = ((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0));
+         System.out.println(year + " is a leap year..." + isLeapYear + ".");
+
+         year = 2400;
+         isLeapYear = ((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0));
+         System.out.println(year + " is a leap year..." + isLeapYear + ".\n");
 
 
         /*
@@ -143,6 +158,9 @@ public class ProblemSet1 {
          *
          * What is the wind chill?
          */
+         double temp = 38;
+         double windChill = 35.74 + 0.6215 * temp + ((.4275 * temp) - 35.75) * Math.pow(14, 0.16);
+         System.out.printf("%,.1f degrees.\n", windChill);
 
 
 
